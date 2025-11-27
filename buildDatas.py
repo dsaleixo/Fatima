@@ -76,9 +76,9 @@ class ProteinGNN(nn.Module):
         return x
 
 # --- Pipeline principal ---
-class BuildDatas:
+class BuildMdrDB_ResidueGraph:
     @staticmethod
-    def BuildMdrDB_ResidueGraph():
+    def run():
         df = pd.read_csv("MdrDB/data/MdrDB_CoreSet_release_v1.0.2022.tsv", sep="\t") 
      
         cont = 0
@@ -107,6 +107,6 @@ class BuildDatas:
         return 
 
 if __name__ == "__main__":
-    # Lê MdrDB e constrói dataset
-    BuildDatas.BuildMdrDB_ResidueGraph()
+    
+    BuildMdrDB_ResidueGraph.run()
     
